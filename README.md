@@ -1,4 +1,4 @@
-# Starting to DOCKER form PHP & MYSQL & NGINX & PHPMYADMIN
+# DOCKER for PHP & MYSQL & NGINX & PHPMYADMIN 
 
 You can start with this docker for php mysql projects.
 Do you want to change versions ?
