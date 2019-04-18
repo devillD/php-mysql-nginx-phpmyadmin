@@ -1,8 +1,10 @@
-# Big Data - Log Listener with KAFKA - Dockerfile
+# Starting to DOCKER form PHP & MYSQL & NGINX & PHPMYADMIN
 
-Big data - log listener PHP & MYSQL & KAFKA.
-Upload logs to mysql and real-time display on charts.
-Explode big data with sql logs tables. Search it easy.
+You can start with this docker for php mysql projects.
+Do you want to change versions ?
+PHP Version : docker/php/Dockerfile ( now : php:7.2-fpm )
+Nginx Version : docker/nginx/Dockerfile ( now : nginx:1.13.7 )  
+Mysql and others : docker-compose.yml ( now : mysql:8.0 )
 
 ## Requirements
 
@@ -18,13 +20,8 @@ docker-compose up -d
 ```
 
 Visiting `http://localhost` or `http://{local_ip}`.
+Phpmyadmin `http://localhost:8080` or `http://{local_ip}:8080`.
 
-
-## Listen kafka to start.
-
-```
-docker-compose exec php php kafka.consumer.php
-```
 
 ### To destroy the setup
 
@@ -32,11 +29,8 @@ docker-compose exec php php kafka.consumer.php
 docker-compose down
 ```
 
-## Documentation
+## If you change to versions, you will update for this line. And run again.
 
-* [Docker - Network](https://docs.docker.com/network/)
-* [Docker - Environment Variables](https://docs.docker.com/compose/environment-variables/)
-
-- Docker images for [kafka](https://hub.docker.com/r/wurstmeister/kafka/) and [zookeeper](https://hub.docker.com/r/wurstmeister/zookeeper/)
-- [librdkafka](https://github.com/edenhill/librdkafka), a C implementation of the kafka protocol
-- [php-rdkafka](https://github.com/arnaud-lb/php-rdkafka), a kafka client for php
+```
+docker-compose build
+```
