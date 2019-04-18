@@ -2,11 +2,16 @@
 
 You can start with this docker for php mysql projects.
 
-Do you want to change versions ?
+
+## Do you want to change versions ?
+
+```
 
 PHP Version : docker/php/Dockerfile ( now : php:7.2-fpm )
 Nginx Version : docker/nginx/Dockerfile ( now : nginx:1.13.7 )
 Mysql and others : docker-compose.yml ( now : mysql:8.0 )
+```
+
 
 ## Requirements
 
