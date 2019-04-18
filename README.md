@@ -35,5 +35,8 @@ docker-compose down
 ## If you change to versions, you will update for this line. And run again.
 
 ```
-docker-compose build
+docker-compose stop
+docker-compose rm --force
+docker-compose build --no-cache
+docker-compose up -d
 ```
