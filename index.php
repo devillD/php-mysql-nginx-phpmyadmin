@@ -1,8 +1,8 @@
 <?PHP
 
 	
-	echo "Welcome! You can Use PHP & NGINX , MYSQL<br>";
-	echo "{local_ip}:8080 for phpmyadmin<br>";
+	echo "Welcome! You can Use PHP & NGINX";
+	echo "<br><br>Phpmyadmin : {local_ip}:8080";
 	
 	
 	// development.env
@@ -11,11 +11,15 @@
 	$user = getenv('MYSQL_USER');
 	$pass = getenv('MYSQL_PASSWORD');
  
-	$conn = mysqli_connect($host, $user, $pass);
-	if (!$conn) {
-		exit('Connection failed: '.mysqli_connect_error().PHP_EOL);
+	try {
+		$conn = mysqli_connect($host, $user, $pass);
+	} catch(mysqli_sql_exception  $e) {
+		if($e->getCode()==2002)#DB initilazing for docker
+			die("Please waiting a few seconds for mysql initilazing.. And refresh again.");
+		else
+			exit('Connection failed: '.mysqli_connect_error().PHP_EOL);
 	}
  
-	echo 'Successful database connection!';
+	echo '<br><br>MYSQL : Successful database connection!';
    
 ?>
