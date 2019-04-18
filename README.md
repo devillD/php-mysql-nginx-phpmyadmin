@@ -19,6 +19,10 @@ On your own machine you should have:
 ## Run the demo
 
 ```
+git clone --recursive https://github.com/ugrcoban/php-mysql-nginx-phpmyadmin.git projectname
+
+cd projectname
+
 docker-compose up -d
 ```
 
