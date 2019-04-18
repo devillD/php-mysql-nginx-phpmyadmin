@@ -2,7 +2,7 @@
 
 	
 	echo "Welcome! You can Use PHP & NGINX";
-	echo "<br><br>Phpmyadmin : {local_ip}:8080";
+	echo "<br><br>Phpmyadmin : {local_ip}:8080 (username : root // password: root_password)";
 	
 	
 	// development.env
