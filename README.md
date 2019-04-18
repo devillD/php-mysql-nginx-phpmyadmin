@@ -23,6 +23,7 @@ docker-compose up -d
 ```
 
 Visiting `http://localhost` or `http://{local_ip}`.
+
 Phpmyadmin `http://localhost:8080` or `http://{local_ip}:8080`.
 
 
